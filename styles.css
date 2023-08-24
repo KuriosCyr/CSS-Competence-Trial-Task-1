@@ -1,0 +1,65 @@
+/* CSS Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --gradient-background: linear-gradient(45deg, #6C5B7B, #C06C84, #F67280);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--gradient-background);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Animation */
+.animated-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.animated-button:hover {
+    animation: buttonEffect 1s infinite alternate;
+}
+
+@keyframes buttonEffect {
+    from {
+        background-color: var(--primary-color);
+    }
+    to {
+        background-color: var(--secondary-color);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    .animated-button {
+        width: 100%;
+    }
+}
+
